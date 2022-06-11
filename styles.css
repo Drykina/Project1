@@ -33,7 +33,7 @@
   width: auto;
   height: 88px;
   background-color: #ffffff;
-  position: relative;
+  /*position: relative;*/
 }
 .layout {
   box-sizing: border-box;
@@ -46,9 +46,21 @@
   font-size: 28px;
   font-family: "TT Lakes Bold";
   letter-spacing: -0.6px;
+  position: relative;
   /* bold */
 }
-
+h1::before {
+  content: "";
+  width: 8px;
+  height: 40px;
+  background-color: #41f6d7;
+  border-radius: 5px;
+  position: absolute;
+  left: -2.5%;
+  top: 0%;
+  z-index: 0;
+  overflow: hidden;
+}
 .menu {
   margin-top: -10px;
   padding: 0;
@@ -102,7 +114,7 @@ p {
   font-size: 14px;
 }
 
-@media (max-width: 428x) {
+@media (max-width: 428px) {
   .body--mobile {
     width: 320px;
     height: 597px;
@@ -203,10 +215,11 @@ p {
 @media /* (min-width: 768px) and */ (max-width: 1199.98px) {
   .body--desktop {
     width: 768px;
+    box-sizing: border-box;
   }
 
   .header__burger {
-    margin-left: 2%;
+    margin-left: 3%;
     order: -1;
   }
 
@@ -217,11 +230,11 @@ p {
     background-color: #eaeaea;
     color: #eaeaea;
     border-radius: 1px;
-    margin-left: 2%;
+    margin-left: 3%;
   }
 
   .header__logo {
-    margin-left: 2%;
+    margin-left: 3%;
     order: 1;
   }
 
@@ -232,12 +245,12 @@ p {
 
   .header__chat {
     order: 2;
-    margin-left: 2%;
+    margin-left: 3%;
   }
 
   .header__profile {
     order: 2;
-    margin-left: 2%;
+    margin-left: 3%;
   }
   .divider--second {
     content: "";
@@ -247,18 +260,22 @@ p {
     color: #eaeaea;
     border-radius: 1px;
     order: 2;
-    margin-left: 2%;
+    margin-left: 3%;
   }
   .header__enquiry {
     order: 3;
-    margin-left: 2%;
+    margin-left: 3%;
   }
 
   .header__check-status {
     order: 4;
-    margin-left: 2%;
+    margin-left: 3%;
   }
   .layout--desktop {
     width: 768px;
+    padding: 16px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    overflow: hidden;
   }
 }
